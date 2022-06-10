@@ -30,7 +30,7 @@ int main()
                 menor = numero;
             }
         }        
-    }
+    } /*preguntar sobre posicionamiento*/
     cout << "El menor es: " << menor << endl;
     cout << "Cantidad de datos ingresados: " << contador << endl;
     archilec.close();
