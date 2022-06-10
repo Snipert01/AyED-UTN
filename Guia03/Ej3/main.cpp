@@ -11,7 +11,7 @@ int main()
     }
     
     int nro;
-    int contador = 0;
+    int contador {0};
     ofstream pares;
     pares.open("03pares.txt");
     if (!pares) {

@@ -6,8 +6,8 @@ using namespace std;
 int main()
 {
     int nro;
-    float cantDatos = 0;
-    float sum = 0;
+    float cantDatos {0};
+    float sum {0};
     float promedio;
 
    ifstream archilec;

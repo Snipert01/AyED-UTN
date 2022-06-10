@@ -4,9 +4,6 @@
 using namespace std;
 int main()
 {
-    float numero;
-    int contador = 0;
-    double menor = 0;
     ifstream archilec;
     archilec.open("02entrada.txt");
     if (!archilec)
@@ -14,25 +11,23 @@ int main()
         cout << "No se pudo abrir el archivo" << endl;
         return 1;
     }
-    while (archilec >> numero)
+    float nro;
+    float menor;
+
+    archilec >> nro;
+    int i = 1;
+    menor = nro;
+    int pos = i;
+    while (archilec >> nro)
     {
-        cout << "Ingresado: " << numero << endl;
-        contador++;
-        if (contador == 1)
+        ++i;
+        if (nro <= menor)
         {
-            menor = numero;
+            menor = nro;
+            pos = i;
         }
-        else
-        {
-            {
-                if (numero < menor)
-            
-                menor = numero;
-            }
-        }        
-    } /*preguntar sobre posicionamiento*/
-    cout << "El menor es: " << menor << endl;
-    cout << "Cantidad de datos ingresados: " << contador << endl;
+    }
+    cout << "El menor es: " << menor << " en la posicion: " << pos << endl;
     archilec.close();
     return 0;
 }
